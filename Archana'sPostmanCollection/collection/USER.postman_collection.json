@@ -1,0 +1,886 @@
+{
+	"info": {
+		"_postman_id": "9ee53cbf-5f4e-4f2d-a795-f133bbca61f1",
+		"name": "USER",
+		"description": "User API Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10064889",
+		"_collection_link": "https://dark-capsule-621041.postman.co/workspace/API_Team09~a74d6089-4e1e-419f-8f0d-3059374ff67a/collection/10064889-9ee53cbf-5f4e-4f2d-a795-f133bbca61f1?action=share&source=collection_link&creator=10064889"
+	},
+	"item": [
+		{
+			"name": "uap",
+			"item": [
+				{
+					"name": "deleteuser",
+					"item": [
+						{
+							"name": "username",
+							"item": [
+								{
+									"name": "{userFirstName}",
+									"item": [
+										{
+											"name": "delete By User Name",
+											"request": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/uap/deleteuser/username/:userFirstName",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"uap",
+														"deleteuser",
+														"username",
+														":userFirstName"
+													],
+													"variable": [
+														{
+															"key": "userFirstName",
+															"value": "<string>",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "default response",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/uap/deleteuser/username/:userFirstName",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"uap",
+																"deleteuser",
+																"username",
+																":userFirstName"
+															],
+															"variable": [
+																{
+																	"key": "userFirstName"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"status\": \"<string>\",\n  \"message\": \"<string>\"\n}"
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "{userId}",
+							"item": [
+								{
+									"name": "delete By User Id",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Successfully deleted the resource\", function () {    pm.response.to.have.status(204); \r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/uap/deleteuser/{{USERID}}",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"uap",
+												"deleteuser",
+												"{{USERID}}"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "default response",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/uap/deleteuser/:userId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"uap",
+														"deleteuser",
+														":userId"
+													],
+													"variable": [
+														{
+															"key": "userId"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"status\": \"<string>\",\n  \"message\": \"<string>\"\n}"
+										}
+									]
+								},
+								{
+									"name": "delete By UserByFirstname",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Successfully deleted the resource\", function () {    pm.response.to.have.status(204); \r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/uap/deleteuser/{{user_first_name}}",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"uap",
+												"deleteuser",
+												"{{user_first_name}}"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "default response",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/uap/deleteuser/:userId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"uap",
+														"deleteuser",
+														":userId"
+													],
+													"variable": [
+														{
+															"key": "userId"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"status\": \"<string>\",\n  \"message\": \"<string>\"\n}"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "user",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "get User By Id",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {    pm.response.to.have.status(200); });"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/uap/user/{{USERID}}",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"uap",
+												"user",
+												"{{USERID}}"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "default response",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/uap/user/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"uap",
+														"user",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"user_contact_number\": \"<long>\",\n  \"user_email_id\": \"tg-ySbf959O_6k8V_RTK.suThi-zraxp5.2ktdj7KSII2_fsafqLDg-cGVpH3Pbmx-rQ5PDe-VGDjw9Lgy@W7xD.UWZuNvyid\",\n  \"user_first_name\": \"SafdEaqCX\",\n  \"user_last_name\": \"hJ Y\",\n  \"userAddress\": {\n    \"addressId\": \"<integer>\",\n    \"plotNumber\": \"<string>\",\n    \"street\": \"<string>\",\n    \"state\": \"<string>\",\n    \"country\": \"<string>\",\n    \"zipCode\": \"<long>\"\n  },\n  \"user_id\": \"<long>\",\n  \"creation_time\": \"<dateTime>\",\n  \"last_mod_time\": \"<dateTime>\"\n}"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "users",
+					"item": [
+						{
+							"name": "username",
+							"item": [
+								{
+									"name": "{userFirstName}",
+									"item": [
+										{
+											"name": "get User By First Name",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"exec": [
+															"pm.test(\"Status code is 200\", function () {    pm.response.to.have.status(200); });"
+														],
+														"type": "text/javascript",
+														"packages": {}
+													}
+												}
+											],
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/uap/users/username/{{user_first_name}}",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"uap",
+														"users",
+														"username",
+														"{{user_first_name}}"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "default response",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/uap/users/username/:userFirstName",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"uap",
+																"users",
+																"username",
+																":userFirstName"
+															],
+															"variable": [
+																{
+																	"key": "userFirstName"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "[\n  {\n    \"user_contact_number\": \"<long>\",\n    \"user_email_id\": \"eRBZd.y-tx6WYT0-LwHyEWhb.FgU9lQmV@M.yEtUw\",\n    \"user_first_name\": \"gNi\",\n    \"user_last_name\": \"jTOShOxMy\",\n    \"userAddress\": {\n      \"addressId\": \"<integer>\",\n      \"plotNumber\": \"<string>\",\n      \"street\": \"<string>\",\n      \"state\": \"<string>\",\n      \"country\": \"<string>\",\n      \"zipCode\": \"<long>\"\n    },\n    \"user_id\": \"<long>\",\n    \"creation_time\": \"<dateTime>\",\n    \"last_mod_time\": \"<dateTime>\"\n  },\n  {\n    \"user_contact_number\": \"<long>\",\n    \"user_email_id\": \"GCH-Vjub5-2jVO5Nz-3W1AmDrf-hbx.0.a-oC.3jtDniqsN@xMrbjP4mZ.AusxxvcI\",\n    \"user_first_name\": \"MolKQYh\",\n    \"user_last_name\": \"vwJXfJIu\",\n    \"userAddress\": {\n      \"addressId\": \"<integer>\",\n      \"plotNumber\": \"<string>\",\n      \"street\": \"<string>\",\n      \"state\": \"<string>\",\n      \"country\": \"<string>\",\n      \"zipCode\": \"<long>\"\n    },\n    \"user_id\": \"<long>\",\n    \"creation_time\": \"<dateTime>\",\n    \"last_mod_time\": \"<dateTime>\"\n  }\n]"
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "get All Users",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/uap/users/username/Numpy",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"uap",
+										"users",
+										"username",
+										"Numpy"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "default response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/uap/users",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"uap",
+												"users"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"user_contact_number\": \"<long>\",\n    \"user_email_id\": \"eRBZd.y-tx6WYT0-LwHyEWhb.FgU9lQmV@M.yEtUw\",\n    \"user_first_name\": \"gNi\",\n    \"user_last_name\": \"jTOShOxMy\",\n    \"userAddress\": {\n      \"addressId\": \"<integer>\",\n      \"plotNumber\": \"<string>\",\n      \"street\": \"<string>\",\n      \"state\": \"<string>\",\n      \"country\": \"<string>\",\n      \"zipCode\": \"<long>\"\n    },\n    \"user_id\": \"<long>\",\n    \"creation_time\": \"<dateTime>\",\n    \"last_mod_time\": \"<dateTime>\"\n  },\n  {\n    \"user_contact_number\": \"<long>\",\n    \"user_email_id\": \"GCH-Vjub5-2jVO5Nz-3W1AmDrf-hbx.0.a-oC.3jtDniqsN@xMrbjP4mZ.AusxxvcI\",\n    \"user_first_name\": \"MolKQYh\",\n    \"user_last_name\": \"vwJXfJIu\",\n    \"userAddress\": {\n      \"addressId\": \"<integer>\",\n      \"plotNumber\": \"<string>\",\n      \"street\": \"<string>\",\n      \"state\": \"<string>\",\n      \"country\": \"<string>\",\n      \"zipCode\": \"<long>\"\n    },\n    \"user_id\": \"<long>\",\n    \"creation_time\": \"<dateTime>\",\n    \"last_mod_time\": \"<dateTime>\"\n  }\n]"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "updateuser",
+					"item": [
+						{
+							"name": "{userId}",
+							"item": [
+								{
+									"name": "update User",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"pm.test(\"Updated data is correct\", function () {\r",
+													"    let jsonData = pm.response.json();\r",
+													"   \r",
+													"    pm.expect(jsonData.user_first_name).to.equal(\"Updatedname\");\r",
+													"    pm.expect(jsonData.user_last_name).to.equal(\"lison\");\r",
+													"    pm.expect(jsonData.user_contact_number).to.equal(4156782906);\r",
+													"    pm.expect(jsonData.user_email_id).to.equal(\"Updatedemail.doe@example.com\");\r",
+													"\r",
+													"});\r",
+													"pm.test(\"Content-Type is application/json\", function () {\r",
+													"    pm.response.to.have.header(\"Content-Type\");\r",
+													"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													"pm.globals.set(\"randomEmail\", `user${Math.floor(Math.random()*1000)}@test.com`);"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\"user_first_name\": \"Updatedname\",\n \"user_last_name\":  \"lison\",\n\"user_contact_number\": \"4156782906\",\n \"user_email_id\": \"Updatedemail.doe@example.com\",\n\"userAddress\": {\n   \"plotNumber\": \"A-233\",\n   \"street\": \"Miller\",\n   \"state\": \"Wisconsin\",\n    \"country\": \"USA\",\n   \"zipCode\": \"56227\"\n }\n}\n\n\n\n\n\n\n",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/uap/updateuser/{{USERID}}",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"uap",
+												"updateuser",
+												"{{USERID}}"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "API CreateUser",
+					"item": [
+						{
+							"name": "CreateNewUser",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"\r",
+											"var responseObj = pm.response.json();\r",
+											"const reqBody =JSON.parse(pm.request.body.raw)\r",
+											"if (responseObj.user_id){\r",
+											"pm.test(\"check user_first_name\", function(){\r",
+											"    pm.expect(responseObj.user_first_name).eql(reqBody.user_first_name);\r",
+											"});\r",
+											"pm.test(\"check user_last_name\", function(){\r",
+											"    pm.expect(responseObj.user_last_name).eql(reqBody.user_last_name);\r",
+											"});\r",
+											"pm.test(\"check user_contact_number\", function(){\r",
+											"    pm.expect(responseObj.user_contact_number).eql(parseInt(reqBody.user_contact_number));\r",
+											"});\r",
+											"pm.test(\"check user_emailid\", function(){\r",
+											"    pm.expect(responseObj.user_email_id).eql(reqBody.user_email_id);\r",
+											"});\r",
+											"pm.test(\"check plotnumber\", function(){\r",
+											"    pm.expect(responseObj.userAddress.plotNumber).eql(reqBody.userAddress.plotNumber);\r",
+											"});\r",
+											"pm.test(\"check street\", function(){\r",
+											"    pm.expect(responseObj.userAddress.street).eql(reqBody.userAddress.street);\r",
+											"});\r",
+											"pm.test(\"check state\", function(){\r",
+											"    pm.expect(responseObj.userAddress.state).eql(reqBody.userAddress.state);\r",
+											"});\r",
+											"pm.test(\"check country\", function(){\r",
+											"    pm.expect(responseObj.userAddress.country).eql(reqBody.userAddress.country);\r",
+											"});\r",
+											"pm.test(\"check zipcode\", function(){\r",
+											"       pm.expect(responseObj.userAddress.zipCode).to.eql(parseInt(reqBody.userAddress.zipCode));\r",
+											"});\r",
+											"\r",
+											"// chaning--\r",
+											"var jsondata = pm.response.json();\r",
+											"pm.environment.set(\"USERID\", jsondata.user_id);\r",
+											"pm.environment.set(\"user_first_name\", jsondata.user_first_name);\r",
+											"}\r",
+											"pm.collectionVariables.set(\"USERID\",responseObj.user_id);\r",
+											"const schema = {\r",
+											"    \"type\":\"object\",\r",
+											"    \"properties\":{\r",
+											"        \"user_id\":{\"type\":\"integer\"},\r",
+											"        \"user_first_name\": {\"type\": \"string\"},\r",
+											"        \"user_last_name\": { \"type\": \"string\"},\r",
+											"        \"user_contact_number\": { \"type\": \"integer\"},\r",
+											"        \"user_email_id\": { \"type\": \"string\"},\r",
+											"        \"creation_time\":{\"type\":\"string\"},\r",
+											"        \"last_mod_time\":{\"type\":\"string\"},\r",
+											"        \"userAddress\": {\r",
+											"            \"type\":\"object\",\r",
+											"            \"properties\":{\r",
+											"                \"addressId\":{\"type\":\"integer\"},\r",
+											"                \"plotNumber\":{\"type\": \"string\"},\r",
+											"                \"street\":{\"type\": \"string\"},\r",
+											"                \"state\": {\"type\":\"string\"},\r",
+											"                \"country\": {\"type\":\"string\"},\r",
+											"                \"zipCode\":{\"type\": \"integer\"}\r",
+											"            }\r",
+											"         }\r",
+											"    }\r",
+											"}\r",
+											"pm.test(\"Validate Schema\"),function(){\r",
+											"    pm.response.to.have.jsonSchema(schema);\r",
+											"}\r",
+											"\r",
+											"\r",
+											"\r",
+											" // Status and line\r",
+											"pm.test(\"Status Code matches expected\", function () {\r",
+											"    pm.response.to.have.status(parseInt(pm.iterationData.get(\"expectedstatus\")));\r",
+											"});\r",
+											"pm.test(\"Status line is correct\", function () {\r",
+											"    pm.expect(pm.response.status).to.eql(pm.iterationData.get(\"expectedstatusline\"));\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Content-Type is application/json\", function () {\r",
+											"    pm.response.to.have.header(\"Content-Type\");\r",
+											"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+											"});\r",
+											"\r",
+											"\r",
+											"\r",
+											"\r",
+											"\r",
+											"\r",
+											"\r",
+											"\r",
+											"\r",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "userapi@2025",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "Numpy@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\"user_first_name\": \"{{firstname}}\",\r\n \"user_last_name\":  \"{{lastname}}\",\r\n\"user_contact_number\": \"{{contactno}}\",\r\n \"user_email_id\": \"{{emailid}}\",\r\n\"userAddress\": {\r\n   \"plotNumber\": \"{{plotno}}\",\r\n   \"street\": \"{{street}}\",\r\n   \"state\": \"{{state}}\",\r\n    \"country\": \"{{country}}\",\r\n   \"zipCode\": \"{{zipcode}}\"\r\n }\r\n}\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/uap/createusers",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"uap",
+										"createusers"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"auth": {
+						"type": "basic",
+						"basic": [
+							{
+								"key": "password",
+								"value": " userapi@2025",
+								"type": "string"
+							},
+							{
+								"key": "username",
+								"value": "Numpy@gmail.com",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "userapi@2025",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "Numpy@gmail.com",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://userserviceapp-f5a54828541b.herokuapp.com"
+		},
+		{
+			"key": "firstname",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "lastname",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "contactno",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "emailid",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "plotno",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "street",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "state",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "country",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "zipcode",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "USERID",
+			"value": "{{USERID}}"
+		}
+	]
+}

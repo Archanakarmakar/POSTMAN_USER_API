@@ -1,0 +1,6 @@
+firstname,lastname,contactno,emailid,plotno,street,state,country,zipcode,expectedstatus,expectedstatusline
+Anadi,Doa,4147671251,Anadi8323@gmail.com,A-166,Lincoln,Wisconsin,USA,54252,201,Created
+Caddy,,7829103450,Colohn123@gmail.com,A-124,Lincoln,Wisconsin,USA,54253,400,Bad Request
+Samson,DAnish,7829103899,Colohn124@gmail.com,y-100,wilsons,Milwaukee,USA,72131,409,Conflict
+Samn,doll,7829103231,Djoooh8323@gmail.com,SA-12,wilson,Texas,USA,72136,409,Conflict
+Tammy,asd,,tammy123@gmail.com,FF-10,MIKE,Illinois,USA,60290,400,Bad Request
